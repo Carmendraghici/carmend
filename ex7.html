@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap">
     <!-- Bootstrap core CSS -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet">
-
+   
 </head>
 
 <body>
@@ -72,23 +72,16 @@
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.4/umd/popper.min.js">
     </script>
     <!-- Bootstrap core JavaScript -->
-    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.4.1/js/bootstrap.min.js"></script>
-
+    <script type="text/javascript"
+        src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.4.1/js/bootstrap.min.js"></script>
+    
 
     <script>
         // A $( document ).ready() block.
         $(document).ready(function () {
-            $('#btn1').on('click', function () {
-                $("#panel1").slideToggle(500);
-            });
-            $('#btn2').on('click', function () {
-                $("#panel2").slideToggle(500);
-            });
-            $('#btn3').on('click', function () {
-                $("#panel3").slideToggle(500);
-            });
-            $('#btn4').on('click', function () {
-                $("#panel4").slideToggle(500);
+            $('button').on('click', function(){
+                let panelId = $(this).attr('data-panel');
+                $('#'+panelId).slideToggle(500);
             });
 
 
